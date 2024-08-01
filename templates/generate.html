@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generate New Article</title>
+</head>
+<body>
+    <h1>Generate New Article</h1>
+    <form method="POST">
+        <label for="topic">Topic:</label>
+        <input type="text" id="topic" name="topic" required>
+        <button type="submit">Generate</button>
+    </form>
+    <a href="{{ url_for('index') }}">Back to Articles</a>
+</body>
+</html>

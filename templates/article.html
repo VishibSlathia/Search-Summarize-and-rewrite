@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ article.title }}</title>
+</head>
+<body>
+    <h1>{{ article.title }}</h1>
+    <p>{{ article.date_created.strftime('%Y-%m-%d') }}</p>
+    {{ article.content|safe }}
+    <a href="{{ url_for('index') }}">Back to Articles</a>
+</body>
+</html>

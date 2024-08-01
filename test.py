@@ -1,19 +1,21 @@
 import requests
 import os
-from pyairtable import Table
+from pyairtable import Api
 from openai import OpenAI
 from serpapi import google_search # I didn't really use this as it was getting super complicated and requests.get does the job insanely well.
 from bs4 import BeautifulSoup
 
 # API Keys and Configuration
-SERP_API_KEY = ""
+SERP_API_KEY = "b731ec8c47824b66cbdc2700976f0d078c0328dacbd77df24c4ad120c74b19aa"
 OPENAI_API_KEY = ""
-AIRTABLE_API_KEY= ""
+AIRTABLE_API_KEY= "patwm8JXKpGwh3tnD.e4e4826201df911e56e0b2e019f52b675a7cb58275f33e5288f1ed4ae3a8c275"
 AIRTABLE_BASE_ID = "appjFY4nD28B6gfmA"
 AIRTABLE_TABLE_NAME = "tblJomhoQ5ShIcnDN"
 
 # Initialize APIs
-airtable = Table(AIRTABLE_API_KEY, AIRTABLE_BASE_ID, AIRTABLE_TABLE_NAME)
+airtable_api = Api(AIRTABLE_API_KEY)
+airtable = airtable_api.table(AIRTABLE_BASE_ID, AIRTABLE_TABLE_NAME)
+
 openai_client = OpenAI(api_key=OPENAI_API_KEY)
 
 def scrape_google(query, num_results=5):

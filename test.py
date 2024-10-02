@@ -6,11 +6,11 @@ from serpapi import google_search # I didn't really use this as it was getting s
 from bs4 import BeautifulSoup
 
 # API Keys and Configuration
-SERP_API_KEY = "b731ec8c47824b66cbdc2700976f0d078c0328dacbd77df24c4ad120c74b19aa"
+SERP_API_KEY = ""
 OPENAI_API_KEY = ""
-AIRTABLE_API_KEY= "patwm8JXKpGwh3tnD.e4e4826201df911e56e0b2e019f52b675a7cb58275f33e5288f1ed4ae3a8c275"
-AIRTABLE_BASE_ID = "appjFY4nD28B6gfmA"
-AIRTABLE_TABLE_NAME = "tblJomhoQ5ShIcnDN"
+AIRTABLE_API_KEY= ""
+AIRTABLE_BASE_ID = ""
+AIRTABLE_TABLE_NAME = ""
 
 # Initialize APIs
 airtable_api = Api(AIRTABLE_API_KEY)

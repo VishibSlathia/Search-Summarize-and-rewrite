@@ -6,13 +6,13 @@ from flask import Flask, render_template, request, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 import google.generativeai as genai
-
+import sys
 # API Keys and Configuration
-SERP_API_KEY = "b731ec8c47824b66cbdc2700976f0d078c0328dacbd77df24c4ad120c74b19aa"
-GEMINI_API_KEY = "AIzaSyBh8fREoUx5fdlQUfZVQXmqAH3wN5Otoe4"  # Your Gemini API key
-AIRTABLE_API_KEY= "patwm8JXKpGwh3tnD.e4e4826201df911e56e0b2e019f52b675a7cb58275f33e5288f1ed4ae3a8c275"
-AIRTABLE_BASE_ID = "appjFY4nD28B6gfmA"
-AIRTABLE_TABLE_NAME = "tblJomhoQ5ShIcnDN"
+SERP_API_KEY = ""
+GEMINI_API_KEY = ""  # Your Gemini API key
+AIRTABLE_API_KEY= ""
+AIRTABLE_BASE_ID = ""
+AIRTABLE_TABLE_NAME = ""
 
 # Initialize APIs
 airtable_api = Api(AIRTABLE_API_KEY)
